@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  gitserver:
+    build: .
+    ports:
+      - "9418:9418"
+    restart: always
+    volumes:
+      # This volume maps the repository folder to persist data
+      - git-data:/srv/git
+
+volumes:
+  git-data:
+

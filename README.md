@@ -88,7 +88,7 @@ docker-compose logs -f gitserver
 ### **Cloning the Repository**
 
 ```sh
-git clone git://localhost/myproject.git
+git clone git://localhost:9418/myproject.git
 ```
 
 If accessing from another machine:
@@ -100,7 +100,7 @@ git clone git://<host-ip>/myproject.git
 ### **Pushing to the Repository**
 
 ```sh
-git remote add origin git://localhost/myproject.git
+git remote add origin git://localhost:9418/myproject.git
 git push origin main
 ```
 

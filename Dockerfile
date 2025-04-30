@@ -21,6 +21,9 @@ RUN apt-get update && apt-get install -y openssl && \
         -out /etc/nginx/ssl/git.crt \
         -subj "/CN=localhost"
 
+# allow git-http-backend to accept pushes
+RUN git config --system http.receivepack true
+
 # Put nginx config in place
 COPY nginx.conf /etc/nginx/sites-enabled/default
 
